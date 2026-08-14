@@ -1,0 +1,244 @@
+
+@font-face {
+    font-family: plumbum;
+    src: url(fonts/Plumbum.ttf);
+}
+@font-face {
+    font-family: monogram;
+    src: url(fonts/monogram.ttf);
+}
+@font-face {
+    font-family: matchup;
+    src: url(fonts/MatchupPro.ttf);
+}
+@font-face {
+    font-family: karenfat;
+    src: url(fonts/KarenFat.ttf);
+}
+@font-face {
+    font-family: nope8;
+    src: url(fonts/Nope_8.ttf);
+}
+
+* {
+    font-family: monogram, plumbum, matchup;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que bordas e paddings não estoure a tela */
+    font-family: monogram;
+}
+
+:root {
+    /* TEXT VARS */
+    --font-size: 28px;
+    
+    /* TEXT COLORS */
+    --high-strong: #FF0000;
+    --high-light: #0000FF;
+
+
+    /* BG COLORS */
+    --w-gradient-dark: #1B1852;
+    --w-gradient-light: #4B5DE0;
+
+    /* THEME VARS */
+    --border-width: 4px;
+    --shadow-size: 7px;
+
+    --frame-color: #D3D3D3;
+    --frame-light-color: #F2F2F2;
+    --frame-dark-color: #959595;
+    --frame-darker-color: #959595;
+
+}
+
+
+/*---------------------------- MAIN ELEMENTS ----------------------------*/
+
+/* -------- TEXT CLASSES -------- */
+.h-strong {
+    color: var(--high-strong);
+
+}
+.h-light {
+    color: var(--high-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+
+
+/* -------- SCROLLBAR -------- */
+::-webkit-scrollbar {
+    width: 15px;
+    min-width: 15px;
+    height: 15px;
+    min-height: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--w-gradient-light);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--frame-color);
+    border-style: solid;
+    border-width: calc(var(--border-width)*.7);
+    border-color: var(--frame-light-color) var(--frame-dark-color) var(--frame-dark-color) var(--frame-light-color);
+    padding: var(--border-width);
+}
+
+/*---------------------------- LAYOUT CONTENT ----------------------------*/
+
+body {
+    /*
+    background-image: url(images/backgrounds/winxp_bg.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    */
+
+    width: 100%;
+	overflow: auto;
+}
+
+.layout {
+    width: 100%;
+    grid-area: 1 / 1;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    padding-bottom: 13px;
+}
+
+/* FLEX BASE */
+.vertical-flex {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100dvh; /* Preenche a tela com base no menor espaço visível */
+    box-sizing: border-box; /* Garante que bordas e paddings não estoure a tela */
+
+    padding: 40px;
+    max-width: 1600px;
+}
+
+/* CONTENT */
+.flex-item {
+    height: auto;
+    margin: 5px;
+    flex: 1 1 0%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.center-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    position: relative;
+}
+
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.header {
+    height: 100px;
+    background: none;
+}
+.foster {
+    height: 100px;
+}
+
+/*---------------------------- MAIN FRAME ----------------------------*/
+
+.frame {
+    background-color: var(--frame-color);
+    border-style: solid;
+    border-width: var(--border-width);
+    border-color: var(--frame-light-color) var(--frame-dark-color) var(--frame-dark-color) var(--frame-light-color);
+    padding: var(--border-width);
+
+    box-shadow: var(--shadow-size) var(--shadow-size);
+    font-size: var(--font-size);
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: fit-content;
+    
+}
+.frame .content-frame {
+    border-style: solid;
+    border-width: var(--border-width);
+    border-color: var(--frame-dark-color) var(--frame-light-color) var(--frame-light-color) var(--frame-dark-color);
+    padding: var(--border-width);
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+
+}
+.frame .white-bg {
+    background-color: white;
+}
+
+
+.w-bar {
+    text-align: center;
+    color: white;
+    padding: var(--border-width);
+    margin-bottom: var(--border-width);
+    background-image: linear-gradient(to right,var(--w-gradient-dark), var(--w-gradient-light));
+    
+    display: flex;
+    align-items: center;
+}
+
+.w-bar p {
+    flex-grow: 1;
+    font-size: 30px;
+}
+
+.w-close-button {
+    box-shadow: 3px 3px;
+
+    --size : 10px;
+    font-weight: bold;
+    margin: 1px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px;
+
+    height: var(--size);
+    width: var(--size);
+    max-height: var(--size);
+    max-width: var(--size);
+
+    cursor: pointer;
+    font-size: large;
+}
+
+/*---------------------------- STAMPS ELEMENTS ----------------------------*/
+.stamp-container {
+    display: flex;
+    flex-direction: row;
+}
+.stamp-button {
+    transition: all .2s;
+    background-color: #00000000;
+    border-color: #00000000;
+    cursor: pointer;
+}
+.stamp-button:hover {
+    scale: 1.2;
+}

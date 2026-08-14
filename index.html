@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ulon WebHome</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles/css-effects.css">
+        
+        <script src="js/effects/parallax.js" defer></script>
+        <script src="js/effects/moving-letters.js" defer></script>
+        <script src="js/widgets/current-status.js" defer></script>
+    </head>
+    
+    <!-- WINDOW SETUP
+        <div class="frame">
+            <div class="w-bar"><p>Surfing...</p> <button class="frame w-close-button">X</button></div>
+            <div class="content-frame white-bg">Content</div>
+        </div>
+    -->
+
+
+    <body>
+        <div class="parallax-container">
+            <div class="parallax-bg" id="parallax-bg"></div>
+        </div>
+        
+        <div class="layout" style="min-height: 1000px;">
+                <div class="vertical-flex">
+                    <!----------------- HEADER ----------------->
+                    <div class="frame" style="max-height: 110px;">
+                        <div class="w-bar"><p>ULON WEBHOME</p></div>
+                        <div class="center-div" style="translate: -20px;">
+                            <img src="images/titles/ULON.png" alt="ULON" style="translate: 0px -33px; rotate: 5deg;">
+                            <h1 style="translate: -5px -30px; scale: 1.6; rotate: 15deg; color: rgb(53, 73, 161);">'S</h1>
+                            <img src="images/titles/head.gif" alt="ULON" style="translate: 0px -33px; rotate: -5deg;">
+                        </div>
+                    </div>
+
+                    <!----------------- WARNING MARQUEE ----------------->
+                    <div class="marquee">
+                        <div class="marquee__content">
+                            <span>I'm remaking my website in actual HTML now. I still love the Godot version, but I need to let it go...</span>
+                            <span>I'm remaking my website in actual HTML now. I still love the Godot version, but I need to let it go...</span>
+                        </div>
+                        <div class="marquee__content" aria-hidden="true">
+                            <span>I'm remaking my website in actual HTML now. I still love the Godot version, but I need to let it go...</span>
+                            <span>I'm remaking my website in actual HTML now. I still love the Godot version, but I need to let it go...</span>
+                        </div>
+                    </div>
+                    
+                    
+                    <!----------------- LAYOUTBLOCK ----------------->
+                    <div style="min-height: 500px; position: relative; display: grid;">
+                        <div class="frame" style="height: 100%; filter: brightness(.6); opacity: .3; grid-area: 1 / 1;"></div>
+                        <div class="layout" style="z-index: 2;">
+                            <!-- LEFT SIDE BAR -->
+                            <div class="flex-item side-bar">
+
+                            </div>
+                            
+                            <!-- MAIN CONTENT -->
+                            <div class="flex-item" style="flex-grow: 3;">
+                                                    
+                                <div class="frame">
+                                    <div class="w-bar"><p>Home - is online</p> <button class="frame w-close-button">X</button></div>
+                                    <div class="content-frame white-bg" style="padding: 25px; padding-top: 10px; padding-bottom: 15px; overflow: hidden;">
+                                        <div class="center-div" style="display: flex; flex-direction: column;">
+                                            <p>
+                                                <span class="h-light">Hey!! Welcome to my ACTUAL Website :3</span> I made this place to share some parts of me and have a safe space to do whatever I want without social media numbers and anxiety lol.
+                                            </p>
+                                            <p><span class="h-strong"> --------------- &lt3 ---------------</span></p>
+                                            <p><span class="h-light">I'm rebuilding this place from scratch, it used to be made in Godot <br>(I'm an HTML begginer) 
+                                                    (WIP).</span></p>
+                                            <div style="display: flex; flex-direction: row;">
+                                                <p>
+                                                    Feel free to take a look around, my socials are on the right 
+                                                                        in case you need anything. <span class="h-strong">&lt3
+                                                    <br>English is not my first language <b><span class="bb-wave">THERE WILL BE MISTAKES, I'M SORRY.</span></b></span>
+                                                </p>
+                                                <img src="images/gifs/professor-hypnospace.gif" style="max-width: 100px; object-fit: none; 
+                                                align-self: flex-end; scale: 2; translate: -40px -13px;" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <!-- RIGHT SIDE BAR -->
+                            <div class="flex-item side-bar">
+
+                                <!-- STATUS WINDOW -->
+                                <div class="frame">
+                                    <div class="w-bar" style="display: flex;">
+                                        <div id="statuscafe-username" style="text-transform: uppercase;"></div>
+                                    </div>
+                                    <div class="content-frame white-bg" style="padding: 5px; text-align: center;">
+                                        <div id="statuscafe">
+                                            <div id="statuscafe-content"></div>
+                                            <div id="statuscafe-time" style="color: gray;"></div>
+                                        </div> 
+                                    </div>
+                                </div>
+
+                                <!-- OLD WEBSITE BUTTON -->
+                                <a class="no-underline" href="https://ulon.nekoweb.org" target="_blank">
+                                    <button class="normal-button window-shadow" style="width: 100%;">
+                                        <div class="center-div" style="gap: 5px;">
+                                            <p style="flex-grow: 1;">OLD WEBSITE</p>
+                                            <img src="images/icons/favicons/ulon-head-icon.png" alt="" style="width:  40px; image-rendering: pixelated;">
+                                        </div>
+                                    </button>
+                                </a>
+
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="marquee" style="gap: 0; --duration: 25s;" >
+                        <div class="marquee__content" style="gap: 0; overflow: visible;">
+                            <img class="stamp-button" src="images/stamps/88x31nocookie.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/148.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/2020SUCKS.png" alt="">
+                            <img class="stamp-button" src="images/stamps/best_viewed_in_landscape.png" alt="">
+                            <img class="stamp-button" src="images/stamps/bestview.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/bestvieweddesktop.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/eyes2.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/fireskull.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/foreveronline2.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/halflife.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/iwishicouldgobackintime.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/loopdeloop_20.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/music.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/nintendo-hh-3ds.png" alt="">
+                            <img class="stamp-button" src="images/stamps/playstation.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/stop microsoft.gif" alt="">
+                            <a href="https://ulon.nekoweb.org" target="_blank"><img class="stamp-button" src="images/stamps/ulon_button.gif" alt=""></a>
+                            <img class="stamp-button" src="images/stamps/web.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/wingun.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/xp.gif" alt="">
+                            <a href="https://status.cafe" target="_blank"><img class="stamp-button" src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
+                        </div>
+                        <div class="marquee__content" aria-hidden="true" style="gap: 0;">
+                            <img class="stamp-button" src="images/stamps/88x31nocookie.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/148.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/2020SUCKS.png" alt="">
+                            <img class="stamp-button" src="images/stamps/best_viewed_in_landscape.png" alt="">
+                            <img class="stamp-button" src="images/stamps/bestview.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/bestvieweddesktop.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/eyes2.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/fireskull.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/foreveronline2.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/halflife.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/iwishicouldgobackintime.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/loopdeloop_20.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/music.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/nintendo-hh-3ds.png" alt="">
+                            <img class="stamp-button" src="images/stamps/playstation.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/stop microsoft.gif" alt="">
+                            <a href="https://ulon.nekoweb.org" target="_blank"><img class="stamp-button" src="images/stamps/ulon_button.gif" alt=""></a>
+                            <img class="stamp-button" src="images/stamps/web.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/wingun.gif" alt="">
+                            <img class="stamp-button" src="images/stamps/xp.gif" alt="">
+                            <a href="https://status.cafe" target="_blank"><img class="stamp-button" src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </body>
+</html>

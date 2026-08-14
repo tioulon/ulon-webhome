@@ -1,0 +1,143 @@
+/* -------------------------- MARQUEE -------------------------- */
+.marquee {
+  --gap: 1rem;
+  --duration: 50s;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  width: 100%;
+}
+
+/* Individual track columns */
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  
+  /* 1. Alinha os textos com espaçamento igual entre eles */
+  justify-content: space-around; 
+  
+  /* 2. Força o conteúdo a esticar e ocupar toda a largura da tela */
+  flex-grow: 1; 
+  min-width: 100%;
+  
+  gap: var(--gap);
+  animation: scroll var(--duration) linear infinite;
+
+  /* Alinha os textos e os separadores perfeitamente no meio da linha */
+  align-items: center; 
+}
+
+/* ─── O SEPARADOR MÁGICO AQUI ─── */
+.marquee__content span::after {
+  /* Insira aqui o símbolo desejado. Exemplos: " •" ou " —" ou " ✦" */
+  content: "✦"; 
+  
+  /* Dá uma distância entre o texto e o separador */
+  margin-left: var(--gap); 
+}
+
+.marquee__content span {
+  font-size: 25px;
+  font-family: karenfat;
+  -webkit-text-fill-color: white; /* Core text color */
+  -webkit-text-stroke: 5px black;
+  paint-order: stroke fill;
+  text-shadow: 4px  4px 0px #000;   /* The actual ambient drop shadow */
+
+}
+
+/* Pause animation on hover */
+.marquee:hover .marquee__content {
+  animation-play-state: paused;
+}
+
+/* Keyframe movement logic */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+/* Accessibility: Stop motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__content {
+    animation: none;
+  }
+}
+
+
+
+/* -------------------------- PARALLAX -------------------------- */
+
+.parallax-container {
+  position: relative;
+  width: 100%;
+}
+.parallax-bg {
+  position: fixed;
+  top: 50px;
+  scale: 1.2;
+  left: 0;
+  width: 100%;
+  height: calc(100vh + 50px);
+  background-image: url(/images/backgrounds/winxp_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  z-index: -1;
+}
+
+/* -------------------------- MOVING LETTERS -------------------------- */
+
+/* --- WAVE EFFECT --- */
+.bb-wave span {
+  display: inline-block;
+  animation: bb-wave-anim 1s ease-in-out infinite;
+  /* Formula to delay each letter based on its index variable (--i) */
+  animation-delay: calc(var(--i) * 0.1s);
+  will-change: transform; 
+}
+
+@keyframes bb-wave-anim {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-0.1em); } /* Adjust height of the wave here */
+}
+
+/* --- SHAKE EFFECT --- */
+.bb-shake span {
+  display: inline-block;
+  animation: bb-shake-anim 0.15s linear infinite;
+  will-change: transform; 
+}
+
+@keyframes bb-shake-anim {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-2px, 1px); }
+  40% { transform: translate(1px, -1px); }
+  60% { transform: translate(-1px, 2px); }
+  80% { transform: translate(2px, 1px); }
+  100% { transform: translate(1px, -2px); }
+}
+
+
+
+/* --------------------------------------------------------------------------------------- */
+/* ---------------------------------- WIDGETS -------------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+
+
+/* -------------------------- STATUS CAFE -------------------------- */
+#statuscafe-username {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#statuscafe-username a {
+  color: white;
+}
+

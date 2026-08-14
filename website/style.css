@@ -73,6 +73,16 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
+.outlined-text {
+  font-size: 25px;
+  font-family: karenfat;
+  -webkit-text-fill-color: white; /* Core text color */
+  -webkit-text-stroke: 5px black;
+  paint-order: stroke fill;
+  text-shadow: 4px  4px 0px #000;   /* The actual ambient drop shadow */
+
+}
+
 /* -------- OVERRIDES -------- */
 .no-underline {
     text-decoration: none;
@@ -282,4 +292,16 @@ body {
 }
 .stamp-button:hover {
     scale: 1.2;
+}
+
+/*---------------------------- BACKGROUNDS ----------------------------*/
+
+.fire {
+    background-image: url(https://ulon.dev/images/gifs/fire.gif);
+    background-position: 0 -40px;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

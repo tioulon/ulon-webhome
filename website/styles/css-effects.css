@@ -117,7 +117,7 @@
 
 /* --- EFEITO DE TREMOR (SHAKE) --- */
 .bb-shake-target {
-  animation: bb-shake-anim 0.8s linear infinite; /* Ficou mais rápido para o olho não acompanhar o caminho */
+  animation: bb-shake-anim 1s linear infinite; /* Ficou mais rápido para o olho não acompanhar o caminho */
   /* Multiplicamos por um número primo quebrado (-0.073s) para garantir que nenhuma letra imite a vizinha */
   animation-delay: calc(var(--i) * -0.073s); 
 }
@@ -173,3 +173,8 @@
   color: white;
 }
 
+
+/* -------------------------- NEKOWEB API -------------------------- */
+#visitor-counter-label {
+  color: white;
+}

@@ -16,5 +16,4 @@ jobs:
           nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
           nekoweb-domain: 'ulon.dev'
           nekoweb-username: 'ulon'
-          directory: '.'
-          clean: false
+          directory: 'website'

@@ -38,6 +38,9 @@
     --high-light: #0000FF;
 
 
+
+
+
     /* BG COLORS */
     --w-gradient-dark: #1B1852;
     --w-gradient-light: #4B5DE0;
@@ -45,11 +48,12 @@
     /* THEME VARS */
     --border-width: 4px;
     --shadow-size: 7px;
+    --global-gap: 8px;
 
     --frame-color: #D3D3D3;
     --frame-light-color: #F2F2F2;
-    --frame-dark-color: #959595;
-    --frame-darker-color: #959595;
+    --frame-dark-color: #818181;
+    --frame-darker-color: #3f3f3f;
 
 }
 
@@ -69,7 +73,41 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
+/* -------- OVERRIDES -------- */
+.no-underline {
+    text-decoration: none;
+}
+.no-shadow {
+    box-shadow: none;
+}
+.window-shadow {
+    box-shadow: var(--shadow-size) var(--shadow-size);
+}
 
+/* -------- BUTTONS -------- */
+
+.normal-button {
+    cursor: pointer;
+    background-color: var(--frame-color);
+    border-style: solid;
+    border-width: var(--border-width);
+    border-color: var(--frame-light-color) var(--frame-dark-color) var(--frame-dark-color) var(--frame-light-color);
+    padding: var(--border-width);
+
+    font-size: var(--font-size);
+
+    display: flex;
+    flex-direction: column;
+
+}
+.normal-button:hover {
+    filter: brightness(1.2);
+}
+.normal-button:active {
+    filter: brightness(1);
+    border-color: var(--frame-dark-color) var(--frame-light-color) var(--frame-light-color) var(--frame-dark-color);
+    
+}
 
 /* -------- SCROLLBAR -------- */
 ::-webkit-scrollbar {
@@ -147,6 +185,8 @@ body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+
+    gap: var(--global-gap);
 }
 .header {
     height: 100px;
@@ -183,7 +223,6 @@ body {
     min-width: 0;
     width: 100%;
     height: 100%;
-
 }
 .frame .white-bg {
     background-color: white;
@@ -199,6 +238,8 @@ body {
     
     display: flex;
     align-items: center;
+
+    max-height: 30px;
 }
 
 .w-bar p {

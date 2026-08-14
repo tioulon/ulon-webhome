@@ -2,6 +2,8 @@
 .marquee {
   --gap: 1rem;
   --duration: 50s;
+  --direction: normal;
+  --offset: 0px;
   display: flex;
   overflow: hidden;
   user-select: none;
@@ -23,6 +25,7 @@
   
   gap: var(--gap);
   animation: scroll var(--duration) linear infinite;
+  animation-direction: var(--direction);
 
   /* Alinha os textos e os separadores perfeitamente no meio da linha */
   align-items: center; 
@@ -55,13 +58,14 @@
 /* Keyframe movement logic */
 @keyframes scroll {
   from {
-    transform: translateX(0);
+    /* Começa com o deslocamento inicial definido */
+    transform: translateX(var(--offset));
   }
   to {
-    transform: translateX(calc(-100% - var(--gap)));
+    /* Desloca a largura total (-100% - var(--gap)) mantendo o offset proporcional */
+    transform: translateX(calc(-100% - var(--gap) + var(--offset)));
   }
 }
-
 /* Accessibility: Stop motion for users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .marquee__content {
@@ -93,35 +97,63 @@
 
 /* -------------------------- MOVING LETTERS -------------------------- */
 
-/* --- WAVE EFFECT --- */
-.bb-wave span {
+/* --- CONFIGURAÇÃO BASE (Otimização para a placa de vídeo) --- */
+.bb-wave-target, .bb-shake-target, .bb-rainbow-target {
   display: inline-block;
+  will-change: transform, color; /* Prepara o navegador para mover e mudar de cor suavemente */
+}
+
+/* --- EFEITO DE ONDA (WAVE) --- */
+.bb-wave-target {
   animation: bb-wave-anim 1s ease-in-out infinite;
-  /* Formula to delay each letter based on its index variable (--i) */
-  animation-delay: calc(var(--i) * 0.1s);
-  will-change: transform; 
+  /* Multiplicamos por -0.05s para começar se movendo instantaneamente com o seu tempo personalizado */
+  animation-delay: calc(var(--i) * -0.05s);
 }
 
 @keyframes bb-wave-anim {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-0.1em); } /* Adjust height of the wave here */
+  50% { transform: translateY(-0.1em); } /* Sua altura personalizada mais sutil */
 }
 
-/* --- SHAKE EFFECT --- */
-.bb-shake span {
-  display: inline-block;
-  animation: bb-shake-anim 0.15s linear infinite;
-  will-change: transform; 
+/* --- EFEITO DE TREMOR (SHAKE) --- */
+.bb-shake-target {
+  animation: bb-shake-anim 0.8s linear infinite; /* Ficou mais rápido para o olho não acompanhar o caminho */
+  /* Multiplicamos por um número primo quebrado (-0.073s) para garantir que nenhuma letra imite a vizinha */
+  animation-delay: calc(var(--i) * -0.073s); 
 }
 
 @keyframes bb-shake-anim {
-  0% { transform: translate(0, 0); }
-  20% { transform: translate(-2px, 1px); }
-  40% { transform: translate(1px, -1px); }
-  60% { transform: translate(-1px, 2px); }
-  80% { transform: translate(2px, 1px); }
-  100% { transform: translate(1px, -2px); }
+  0%   { transform: translate(0px, 0px); }
+  10%  { transform: translate(-1px, -2px); } /* Cima e Esquerda */
+  20%  { transform: translate(2px, 1px); }   /* Baixo e Direita */
+  30%  { transform: translate(-2px, 2px); }  /* Baixo e Esquerda */
+  40%  { transform: translate(1px, -1px); }  /* Cima e Direita */
+  50%  { transform: translate(-1px, 2px); }  /* Baixo e Esquerda */
+  60%  { transform: translate(2px, -2px); }  /* Cima e Direita */
+  70%  { transform: translate(-2px, -1px); } /* Cima e Esquerda */
+  80%  { transform: translate(1px, 2px); }   /* Baixo e Direita */
+  90%  { transform: translate(-1px, -2px); } /* Cima e Esquerda */
+  100% { transform: translate(0px, 0px); }   /* Reseta */
 }
+
+
+/* --- EFEITO ARCO-ÍRIS (RAINBOW) --- */
+.bb-rainbow-target {
+  animation: bb-rainbow-anim 4s linear infinite; 
+  /* Delay negativo para o fluxo de cor começar na hora da direita para a esquerda */
+  animation-delay: calc(var(--i) * -0.15s); 
+}
+
+@keyframes bb-rainbow-anim {
+  0%   { color: #ff6d7b; } /* Seus tons de cores personalizados */
+  17%  { color: #ffbb6e; } 
+  33%  { color: #ffff6e; } 
+  50%  { color: #6fff8e; } 
+  67%  { color: #71c1ff; } 
+  83%  { color: #cf6fff; } 
+  100% { color: #ff6d7b; } 
+}
+
 
 
 

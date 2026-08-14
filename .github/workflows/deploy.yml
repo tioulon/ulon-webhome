@@ -17,3 +17,4 @@ jobs:
           nekoweb-domain: 'ulon.dev'
           nekoweb-username: 'ulon'
           directory: '.'
+          clean: false

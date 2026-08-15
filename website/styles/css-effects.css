@@ -105,14 +105,14 @@
 
 /* --- EFEITO DE ONDA (WAVE) --- */
 .bb-wave-target {
-  animation: bb-wave-anim 1s ease-in-out infinite;
+  animation: bb-wave-anim var(--wave-time, 1s) ease-in-out infinite;
   /* Multiplicamos por -0.05s para começar se movendo instantaneamente com o seu tempo personalizado */
   animation-delay: calc(var(--i) * -0.05s);
 }
 
 @keyframes bb-wave-anim {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-0.1em); } /* Sua altura personalizada mais sutil */
+  50% { transform: translateY(calc(var(--wave-height, 0.2em) * -1)); } /* Sua altura personalizada mais sutil */
 }
 
 /* --- EFEITO DE TREMOR (SHAKE) --- */

@@ -3,7 +3,8 @@ const username = "ulon"; // your nekoweb username
 const getStats = async () => {
     const request = await fetch(`https://nekoweb.org/api/site/info/${username}.dev`);
     const json = await request.json();
-    
+    console.log(json);
+
     // formats the date
     const updatedDate = new Date(json.updated_at);
     const updated = `${updatedDate.getMonth()+1}/${updatedDate.getDate()}/${updatedDate.getFullYear()}`;
@@ -17,12 +18,16 @@ const getStats = async () => {
    
   
     document.getElementById("visitors").innerHTML = `${json.views}`;
-    document.getElementById("created").innerHTML = `!!!! ${created} !!!!`;
-    document.getElementById("updated").innerHTML = `!!!! ${updated} !!!!`;
-    document.getElementById("followers").innerHTML = `!!!! ${json.followers} !!!!`;
+    //document.getElementById("created").innerHTML = `!!!! ${created} !!!!`;
+    //document.getElementById("updated").innerHTML = `!!!! ${updated} !!!!`;
+    document.getElementById("followers").innerHTML = `${json.followers}`;
 };
-//getStats();
+getStats();
 
+
+
+
+//--------------------------------------- BUTTON SOUND PLAYER
 // 1. Load the sound file
 const clickSound = new Audio('https://ulon.dev/sounds/mouse_click.ogg');
 

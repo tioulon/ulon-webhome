@@ -20,7 +20,7 @@ const getStats = async () => {
     document.getElementById("visitors").innerHTML = `${json.views}`;
     //document.getElementById("created").innerHTML = `!!!! ${created} !!!!`;
     //document.getElementById("updated").innerHTML = `!!!! ${updated} !!!!`;
-    document.getElementById("followers").innerHTML = `${json.followers}`;
+    document.getElementById("followers").innerHTML = `${json.followers}`.padStart(6, '0');
 };
 getStats();
 

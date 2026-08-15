@@ -109,6 +109,8 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
 
+    width: 100%;
+
 }
 .normal-button:hover {
     filter: brightness(1.2);
@@ -117,6 +119,14 @@ h1, h2, h3, h4, h5, h6 {
     filter: brightness(1);
     border-color: var(--frame-dark-color) var(--frame-light-color) var(--frame-light-color) var(--frame-dark-color);
     
+}
+
+.navigation-button {
+    align-items: flex-end;
+    justify-content: center;
+    align-content: center;
+    padding-right: 20px;
+    height: 32px;
 }
 
 /* -------- SCROLLBAR -------- */

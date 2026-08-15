@@ -14,7 +14,7 @@
         <script src="js/effects/parallax.js" defer></script>
         <script src="js/effects/moving-letters.js" defer></script>
         <script src="js/widgets/current-status.js" defer></script>
-        <!--<script src="js/widgets/nekoweb-api.js" defer></script>-->
+        <script src="js/widgets/nekoweb-api.js" defer></script>
     </head>
     
     <!-- WINDOW SETUP
@@ -64,7 +64,10 @@
 
                                 <!-- NAVIGATION WINDOW -->
                                 <div class="frame">
-                                    <div class="w-bar"><p>Navigate Around</p> <button class="frame w-close-button">X</button></div>
+                                    <div class="w-bar" style="display: flex; max-height: 100px;">
+                                        <p>Navigate Around</p> 
+                                        <button class="frame w-close-button">X</button>
+                                    </div>
                                     <div class="content-frame white-bg" style="padding: 1px; display: flex; flex-direction: column; gap: 1px;">
                                         <button class="normal-button navigation-button">Home</button>
                                         <button class="normal-button navigation-button">Blog</button>
@@ -119,10 +122,11 @@
                                     <div class="w-bar" style="display: flex;">
                                         <div id="statuscafe-username" style="text-transform: uppercase;"></div>
                                     </div>
-                                    <div class="content-frame white-bg" style="padding: 5px; text-align: center;">
+                                    <div class="content-frame white-bg" style="padding: 5px; padding-bottom: 0; text-align: center;">
                                         <div id="statuscafe">
                                             <div id="statuscafe-content"></div>
                                             <div id="statuscafe-time" style="color: gray;"></div>
+                                            <a href="https://www.imood.com/users/Ulon"><img src="https://moods.imood.com/display/uname-Ulon/trans-1/imood.gif" alt="www.imood.com" border="0" style="image-rendering: pixelated; width: 30%; margin: 0;"></a>
                                         </div> 
                                     </div>
                                 </div>
@@ -134,7 +138,7 @@
                                     </div>
                                     <div class="content-frame white-bg" style="text-align: center; background-color: rgb(22, 22, 22); gap: 10px; display: flex; flex-direction: column;">
                                         <div class="fire">
-                                            <p id="visitor-counter-label" class="visitor-counter-label outlined-text"></p>
+                                            <p id="visitors" class="visitor-counter-label outlined-text"></p>
                                         </div>
                                     </div>
                                 </div>

@@ -21,12 +21,11 @@
 }
 
 * {
-    font-family: monogram, plumbum, matchup;
+    font-family: monogram, plumbum, matchup, nope8;
 
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Garante que bordas e paddings não estoure a tela */
-    font-family: monogram;
 }
 
 :root {
@@ -61,11 +60,11 @@
 /*---------------------------- MAIN ELEMENTS ----------------------------*/
 
 /* -------- TEXT CLASSES -------- */
-.h-strong {
+h-strong {
     color: var(--high-strong);
 
 }
-.h-light {
+h-light {
     color: var(--high-light);
 }
 
@@ -155,6 +154,9 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-track {
     background-color: var(--w-gradient-light);
 }
+.inside-windows-scroll::-webkit-scrollbar-track {
+    background-color: rgb(185, 185, 185);
+}
 ::-webkit-scrollbar-thumb {
     background-color: var(--frame-color);
     border-style: solid;
@@ -197,14 +199,23 @@ body {
     max-width: 1600px;
 }
 
+/* HORIZONTAL FLEX BASE */
+.horizontal-flex {
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--global-gap));
+}
+
 /* CONTENT */
 .flex-item {
     height: auto;
     margin: 5px;
     flex: 1 1 0%;
 
+    flex-wrap: wrap;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: calc(var(--global-gap));
 }
 
 .center-div {
@@ -305,6 +316,27 @@ body {
 
     cursor: pointer;
     font-size: large;
+}
+/*---------------------------- CHANGELOG CONTENT ----------------------------*/
+.changelog-item {
+    padding: 5px;
+    margin-bottom: .9rem;
+}
+
+.changelog-item li {
+    padding-left: 15px;
+    line-height: 25px;
+    margin-top: .8rem;
+    margin-bottom: .9rem;
+}
+
+.changelog-item li::before {
+    color: var(--high-light);
+    content: "> ";
+}
+.changelog-item h3 {
+    font-weight: bold;
+    color: var(--high-light);
 }
 
 /*---------------------------- STAMPS ELEMENTS ----------------------------*/

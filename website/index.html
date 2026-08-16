@@ -15,6 +15,11 @@
         <script src="js/effects/moving-letters.js" defer></script>
         <script src="js/widgets/current-status.js" defer></script>
         <script src="js/widgets/nekoweb-api.js" defer></script>
+        <script src="js/neocities/visitors.js" defer></script>
+
+        
+        <script src="js-content/changelog-data.js" defer></script>
+        <script src="js/script.js" defer></script>
     </head>
     
     <!-- WINDOW SETUP
@@ -33,7 +38,7 @@
         <div class="layout" style="min-height: 1000px;">
                 <div class="vertical-flex">
                     <!----------------- HEADER ----------------->
-                    <div class="frame" style="max-height: 110px;">
+                    <div class="frame" style="max-height: 110px; width: 100%;">
                         <div class="w-bar"><p>ULON WEBHOME</p></div>
                         <div class="center-div" style="translate: -20px;">
                             <img src="images/titles/ULON.png" alt="ULON" style="translate: 0px -33px; rotate: 5deg;">
@@ -111,9 +116,17 @@
 
                             </div>
                             
+
+
+
+
+
+
+
                             <!-- MAIN CONTENT -->
                             <div class="flex-item" style="flex-grow: 3;">
-                                                    
+                                <!-- HOME PAGE CONTENT (TEMPORARY)-->
+                                <!-- HOME WINDOW -->
                                 <div class="frame">
                                     <div class="w-bar"><p>Home - is online</p> <button class="frame w-close-button">X</button></div>
                                     <div class="content-frame white-bg" style="padding: 25px; padding-top: 10px; padding-bottom: 15px; overflow: hidden;">
@@ -121,13 +134,13 @@
                                             <p>
                                                 <span class="h-light">Hey!! Welcome to my ACTUAL Website :3</span> I made this place to share some parts of me and have a safe space to do whatever I want without social media numbers and anxiety lol.
                                             </p>
-                                            <p><span class="h-strong"> --------------- &lt3 ---------------</span></p>
-                                            <p><span class="h-light">I'm rebuilding this place from scratch, it used to be made in Godot <br>(I'm an HTML begginer) 
-                                                    (WIP).</span></p>
+                                            <p><h-strong> --------------- &lt3 ---------------</h-strong></p>
+                                            <p><h-light>I'm rebuilding this place from scratch, it used to be made in Godot <br>(I'm an HTML begginer) 
+                                                    (WIP).</h-light></p>
                                             <div style="display: flex; flex-direction: row;">
                                                 <p>
                                                     Feel free to take a look around, my socials are on the right 
-                                                                        in case you need anything. <span class="h-strong">&lt3
+                                                                        in case you need anything. <h-strong>&lt3
                                                     <br>English is not my first language <b>THERE WILL BE MISTAKES, I'M SORRY.</b></span>
                                                 </p>
                                                 <img src="images/gifs/professor-hypnospace.gif" style="max-width: 100px; object-fit: none; 
@@ -137,8 +150,46 @@
                                     </div>
                                 </div>
 
+                                <div class="horizontal-flex">
+                                    
+                                    <!-- CHANGELOG -->
+                                    <div class="frame" style="min-width: 350px;">  <!--id="changelog-container" -->
+                                        <div class="w-bar"><p>Changelog</p> <button class="frame w-close-button">X</button></div>
+                                        <div class="content-frame white-bg inside-windows-scroll" style="min-height: 300px; max-height: 400px; overflow-y: scroll;">
+                                            <div id="changelog-container"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- TO-DO LIST -->
+                                    <div class="frame">
+                                        <div class="w-bar"><p>TO-DO list</p> <button class="frame w-close-button">X</button></div>
+                                        <div id="to-do-container" class="content-frame white-bg" style="min-height: 300px;">
+                                            This list is empty...
+                                        </div>
+                                    </div>
+
+                                    <!-- FUNNY GIF -->
+                                    <div class="frame" style="width: 100%; rotate: 2deg; z-index: 1;">
+                                        <div class="w-bar"><p>Working...</p> <button class="frame w-close-button">X</button></div>
+                                        <div class="center-div content-frame white-bg" style="flex-grow: 1; width: 100%; height: 100%; overflow: hidden;">
+                                            <img src="https://ulon.dev/images/gifs/the-sims-computer.gif" alt="the sims computer" style="width: 100%; scale: 1.35;">
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             
+
+
+
+
+
+
+
+
+
+
+
                             <!-- RIGHT SIDE BAR -->
                             <div class="flex-item side-bar">
 
@@ -151,7 +202,7 @@
                                         <div id="statuscafe">
                                             <div id="statuscafe-content"></div>
                                             <div id="statuscafe-time" style="color: gray;"></div>
-                                            <a href="https://www.imood.com/users/Ulon"><img src="https://moods.imood.com/display/uname-Ulon/trans-1/imood.gif" alt="www.imood.com" border="0" style="image-rendering: pixelated; width: 80px; margin: 0;"></a>
+                                            <a href="https://www.imood.com/users/Ulon"><img src="https://moods.imood.com/display/uname-Ulon/trans-1/imood.gif" alt="www.imood.com" border="0" style="image-rendering: pixelated; width: 100px; margin: 0;"></a>
                                         </div> 
                                     </div>
                                 </div>
@@ -165,6 +216,7 @@
                                         <div class="fire">
                                             <!-- ACTUALL VISITORS-->
                                             <p id="visitors" class="visitor-counter-label outlined-text"></p>
+                                            <p class="visitor-counter-label outlined-text" id="visitor-count"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -191,7 +243,10 @@
                                                 <p id="followers" class="outlined-text" style="color: white; translate: 0px 0px; translate: -10px -25px; letter-spacing: 3px;"></p>
                                                 
                                                 <a href="https://nekoweb.org/follow/ulon.dev" class="no-underline">
-                                                    <button class="normal-button no-underline" style="rotate: -2deg;position: absolute; width: 200px; left: -20px; bottom: 5px;">Follow on Nekoweb</button>
+                                                    <button class="normal-button no-underline" style="rotate: -2deg;position: absolute; width: 200px; left: -20px; bottom: 16px;  z-index: 1;">Follow on Nekoweb</button>
+                                                </a>
+                                                <a href="https://nekoweb.org/follow/ulon.dev" class="no-underline">
+                                                    <button class="normal-button no-underline" style="rotate: -2deg;position: absolute; width: 220px; left: -20px; bottom: -30px; z-index: 1;">Follow on Neocities</button>
                                                 </a>
                                             </div>
                                             <!-- WIZARD GIF LOL-->

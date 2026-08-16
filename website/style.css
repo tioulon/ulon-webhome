@@ -68,8 +68,9 @@ h-light {
     color: var(--high-light);
 }
 
-h1, h2, h3, h4, h5, h6 {
+p, h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
+    color: black;
 }
 
 .outlined-text {
@@ -302,6 +303,7 @@ body {
 .w-bar p {
     flex-grow: 1;
     font-size: 30px;
+    color: white;
 }
 
 .w-close-button {

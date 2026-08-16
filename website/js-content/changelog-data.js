@@ -4,6 +4,7 @@ const changelogData = [
     "changes": [
       "Added working changelog.",
       "Improved visitors counter to show Neocities visitors.",
+      "Fixed website layout on smaller monitors :D",
     ]
   },
   {

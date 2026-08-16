@@ -92,6 +92,12 @@ h1, h2, h3, h4, h5, h6 {
 .window-shadow {
     box-shadow: var(--shadow-size) var(--shadow-size);
 }
+.flex-grow {
+    flex-grow: 1;
+}
+.flex-base {
+    flex-basis: 250px;
+}
 
 /* -------- BUTTONS -------- */
 
@@ -203,6 +209,7 @@ body {
 .horizontal-flex {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: calc(var(--global-gap));
 }
 
@@ -233,8 +240,6 @@ body {
     flex-direction: column;
     flex-grow: 1;
 
-    min-width: 300px;
-
     gap: var(--global-gap);
 }
 .header {
@@ -259,8 +264,11 @@ body {
 
     display: flex;
     flex-direction: column;
+    flex-shrink: 1;
+    
+    max-width: 100%;
+    
 
-    width: 100%;
     height: fit-content;
     
 }
@@ -395,4 +403,13 @@ body {
     height: fit-content;
     box-shadow: 0 0 8px 8px white inset;
     object-fit: fill;
+}
+
+
+
+/*---------------------------- FORMAT REWORK ----------------------------*/
+@media screen and (max-width: 1155px) {
+    .horizontal-flex {
+        flex-direction: column;
+    }
 }

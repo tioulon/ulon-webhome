@@ -77,39 +77,50 @@
                                         <button class="normal-button navigation-button">Home</button>
                                         <button class="normal-button navigation-button">
                                             <div class="navigation-button-img" style="scale: .8; rotate: -10deg; translate: -95px 20px;"></div>
-                                            Blog
+                                            
+                                            <span style="z-index: 1;">Blog</span>
                                         </button>
                                         <button class="normal-button navigation-button">
                                             <div class="navigation-button-img" style="background-image: url(images/navigation-buttons/webmaster-nav-img.png); scale: -.4 .4; rotate: -10deg; translate: -40px 5px"></div>
-                                            Webmaster
+                                            
+                                            <span style="z-index: 1;">Webmaster</span>
                                         </button>
                                         <button class="normal-button navigation-button">
                                             <div class="navigation-button-img" style="background-image: url(images/navigation-buttons/games-nav-img.png); width: 500px; scale: -.4 .4; rotate: -10deg; translate: -180px -5px; background-position: -130px;" ></div>
-                                            Games
+                                            
+                                            <span style="z-index: 1;">Games</span>
                                         </button>
                                         <button class="normal-button navigation-button">
-                                            Ulon.FM
+                                            
+                                            <span style="z-index: 1;">Ulon.FM</span>
                                         </button>
                                         <button class="normal-button navigation-button">
-                                            Gallery
+                                            
+                                            <span style="z-index: 1;">Gallery</span>
                                         </button>
                                         <button class="normal-button navigation-button">
-                                            Guestbook
+                                            
+                                            <span style="z-index: 1;">Guestbook</span>
                                         </button>
                                         <button class="normal-button navigation-button">
-                                            Shrines
+                                            
+                                            <span style="z-index: 1;">Shrines</span>
                                         </button>
                                         <button class="normal-button navigation-button">
-                                            Workspace
+                                            
+                                            <span style="z-index: 1;">Workspace</span>
                                         </button>
                                         <button class="normal-button navigation-button">
-                                            Journal
+                                            
+                                            <span style="z-index: 1;">Journal</span>
                                         </button>
                                         <button class="normal-button navigation-button">
-                                            Resources
+                                            
+                                            <span style="z-index: 1;">Resources</span>
                                         </button>
                                         <button class="normal-button navigation-button">
-                                            Neighbours
+                                            
+                                            <span style="z-index: 1;">Neighbours</span>
                                         </button>
                                     </div>
                                 </div>
@@ -150,26 +161,26 @@
                                     </div>
                                 </div>
 
-                                <div class="horizontal-flex">
+                                <div class="horizontal-flex" style="justify-content: center;">
                                     
                                     <!-- CHANGELOG -->
-                                    <div class="frame" style="min-width: 350px;">  <!--id="changelog-container" -->
+                                    <div class="frame flex-grow flex-base">  <!--id="changelog-container" -->
                                         <div class="w-bar"><p>Changelog</p> <button class="frame w-close-button">X</button></div>
-                                        <div class="content-frame white-bg inside-windows-scroll" style="min-height: 300px; max-height: 400px; overflow-y: scroll;">
-                                            <div id="changelog-container"></div>
+                                        <div class="content-frame white-bg inside-windows-scroll" style=" min-height: 300px; max-height: 400px; overflow-y: scroll;">
+                                            <div id="changelog-container" style="width: 100%"></div>
                                         </div>
                                     </div>
                                     
                                     <!-- TO-DO LIST -->
-                                    <div class="frame">
+                                    <div class="frame flex-grow flex-base" style="height: auto;">
                                         <div class="w-bar"><p>TO-DO list</p> <button class="frame w-close-button">X</button></div>
-                                        <div id="to-do-container" class="content-frame white-bg" style="min-height: 300px;">
+                                        <div class="content-frame white-bg inside-windows-scroll" style="overflow-y: scroll;">
                                             This list is empty...
                                         </div>
                                     </div>
 
                                     <!-- FUNNY GIF -->
-                                    <div class="frame" style="width: 100%; rotate: 2deg; z-index: 1;">
+                                    <div class="frame flex-grow flex-base" style="min-width: 250px; max-width: 350px; rotate: 2deg; z-index: 1;">
                                         <div class="w-bar"><p>Working...</p> <button class="frame w-close-button">X</button></div>
                                         <div class="center-div content-frame white-bg" style="flex-grow: 1; width: 100%; height: 100%; overflow: hidden;">
                                             <img src="https://ulon.dev/images/gifs/the-sims-computer.gif" alt="the sims computer" style="width: 100%; scale: 1.35;">
@@ -240,23 +251,23 @@
                                         <div style="display: flex;">
                                             <!-- FOLLOWERS CONTENT-->
                                             <div class="center-div" style="display: flex; flex-direction: column; flex-grow: 1;">
-                                                <p id="followers" class="outlined-text" style="color: white; translate: 0px 0px; translate: -10px -25px; letter-spacing: 3px;"></p>
+                                                <p id="followers" class="outlined-text" style="color: white; translate: 0px 0px; translate: -10px 0px; letter-spacing: 3px;">######</p>
                                                 
-                                                <a href="https://nekoweb.org/follow/ulon.dev" class="no-underline">
-                                                    <button class="normal-button no-underline" style="rotate: -2deg;position: absolute; width: 200px; left: -20px; bottom: 16px;  z-index: 1;">Follow on Nekoweb</button>
-                                                </a>
-                                                <a href="https://nekoweb.org/follow/ulon.dev" class="no-underline">
-                                                    <button class="normal-button no-underline" style="rotate: -2deg;position: absolute; width: 220px; left: -20px; bottom: -30px; z-index: 1;">Follow on Neocities</button>
-                                                </a>
                                             </div>
                                             <!-- WIZARD GIF LOL-->
-                                            <div style="min-height: 100px; position: relative; min-width: 100px;">
+                                            <div style="min-height: 50px; position: relative; min-width: 100px;">
                                                 <img src="https://ulon.dev/images/gifs/wizard_pc.gif" alt="wizard lol" style="position: absolute; left: -70px; top: -140px; scale: -.7 .7; pointer-events: none;">
                                             </div>
                                         </div>
                                     </div>
+                                    <a href="https://nekoweb.org/follow/ulon.dev" class="no-underline">
+                                        <button class="normal-button no-underline" style="rotate: -2deg; width: 100%; left: -20px; bottom: 16px;">Follow on Nekoweb</button>
+                                    </a>
+                                    <a href="https://nekoweb.org/follow/ulon.dev" class="no-underline">
+                                        <button class="normal-button no-underline" style="rotate: -2deg; width: 100%; left: -20px; bottom: -30px; font-size: x-large;">Follow on Neocities</button>
+                                    </a>
                                 </div>
-
+                                
                             </div>
                         </div>
 

@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function getTodolist() {
 
         const records = await pb.collection('uh_todo_list').getFullList({
-            sort: 'created',
+            sort: '-done, -created',
         });
 
         console.log(records.length);
@@ -71,7 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const element = records[index];
             console.log(element);
 
-            htmlGerado += `<li><button></button> ${element.content}</li>`;
+            let isChecked = ''; 
+            if (element.done) {
+                isChecked = '<div class="checked">✓</div>'
+            }
+
+            htmlGerado += `<li><button>${isChecked}</button> ${element.content}</li>`;
 
         }
 

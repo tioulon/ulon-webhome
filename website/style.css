@@ -30,11 +30,12 @@
 
 :root {
     /* TEXT VARS */
-    --font-size: 28px;
+    --font-size: 23px;
     
     /* TEXT COLORS */
     --high-strong: #FF0000;
     --high-light: #0000FF;
+    --high-confirm: #82b900;
 
 
 
@@ -66,6 +67,9 @@ h-strong {
 }
 h-light {
     color: var(--high-light);
+}
+h-confirm {
+    color: var(--high-confirm);
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -185,6 +189,17 @@ body {
 	overflow: auto;
 }
 
+.layout-scaler {
+
+    width: 100%;
+    display: grid;
+    grid-area: 1 / 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px;
+    padding-bottom: 13px;
+}
+
 .layout {
     width: 100%;
     grid-area: 1 / 1;
@@ -206,8 +221,25 @@ body {
     max-width: 1600px;
 }
 
-/* HORIZONTAL FLEX BASE */
+
+/* VERTICAL FLEX */
+.v-flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: calc(var(--global-gap));
+}
+
+/* HORIZONTAL FLEX */
 .horizontal-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: calc(var(--global-gap));
+}
+
+/* HORIZONTAL FLEX */
+.layout-horizontal-flex {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -239,7 +271,7 @@ body {
 .side-bar {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-shrink: 1;
 
     gap: var(--global-gap);
 }
@@ -271,8 +303,14 @@ body {
     
 
     height: fit-content;
+    transition: translate .4s;
     
 }
+.frame:hover {
+    translate: 0 -3px;
+    transition: translate .2s;
+}
+
 .frame .content-frame {
     border-style: solid;
     border-width: var(--border-width);
@@ -302,7 +340,7 @@ body {
 
 .w-bar p {
     flex-grow: 1;
-    font-size: 30px;
+    font-size: 25px;
     color: white;
 }
 
@@ -335,9 +373,7 @@ body {
 
 .changelog-item li {
     padding-left: 15px;
-    line-height: 25px;
     margin-top: .8rem;
-    margin-bottom: .9rem;
 }
 
 .changelog-item li::before {
@@ -352,19 +388,41 @@ body {
 /*---------------------------- TO-DO CONTENT ----------------------------*/
 .todo-container li {
     padding-left: 15px;
-    line-height: 25px;
     margin-top: .8rem;
     margin-bottom: .9rem;
 }
 .todo-container button {
-    color: rgba(255, 255, 255, 0);
+    color: black;
     min-width: 20px;
     min-height: 20px;
-    
+
     background-color: transparent;
-    border: solid var(--high-light) 2.5px;
+    border: solid black 2.5px;
     pointer-events: none;
+    cursor: pointer;
+    position: relative;
+    transition: all .25s;
 }
+.todo-container button:hover {
+    scale: 1.25;
+}
+
+.checked {
+    color: var(--high-confirm);
+    position: absolute;
+    left: 3px;
+    top: -1px;
+    scale: 1.7;
+    font-weight: bold;
+    pointer-events: visible;
+    transition: all .25s;
+}
+.checked:hover {
+    font-weight: 999;
+    scale: 2.25;
+}
+
+
 /*---------------------------- STAMPS ELEMENTS ----------------------------*/
 .stamp-container {
     display: flex;
@@ -427,7 +485,7 @@ body {
 
 /*---------------------------- FORMAT REWORK ----------------------------*/
 @media screen and (max-width: 1155px) {
-    .horizontal-flex {
+    .layout-horizontal-flex {
         flex-direction: column;
     }
 }

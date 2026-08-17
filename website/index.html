@@ -3,13 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Ulon WebHome</title>
+        <title>Ulon</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="styles/css-effects.css">
 
-        <link rel="icon" type="image/x-image" href="favicon.ico">
+        <link rel="icon" type="image/gif" href="cd-rotate.gif">
         
         <script src="js/effects/parallax.js" defer></script>
         <script src="js/effects/moving-letters.js" defer></script>
@@ -61,271 +61,288 @@
                     <!----------------- LAYOUTBLOCK ----------------->
                     <div style="min-height: 500px; position: relative; display: grid;">
                         <div class="frame" style="height: 100%; filter: brightness(.6); opacity: .3; grid-area: 1 / 1;"></div>
-                        <div class="layout" style="z-index: 2;">
-                            <!-- LEFT SIDE BAR -->
-                            <div class="flex-item side-bar">
+                        <div class="layout-scaler" style="z-index: 2; ">
+                            <div class="layout">
+                                    <!-- LEFT SIDE BAR -->
+                                <div class="flex-item side-bar">
 
-                                <!-- NAVIGATION WINDOW -->
-                                <div class="frame">
-                                    <div class="w-bar" style="display: flex; max-height: 100px;">
-                                        <p>Navigate Around</p> 
-                                        <button class="frame w-close-button">X</button>
+                                    <!-- STATUS WINDOW -->
+                                    <div class="frame" style="min-width: 257px;">
+                                        <div class="w-bar" style="display: flex; justify-content: center;">
+                                            About me
+                                            
+                                        </div>
+                                        <div class="content-frame white-bg" style="padding: 5px; padding-bottom: 0; text-align: center;">
+                                            <div id="statuscafe" style="padding: 5px;">
+                                                <div class="horizontal-flex" style="flex-wrap: nowrap;">
+                                                    <img src="images/profiles/new_pic_smaller.jpg" alt="" style="max-height: 80px; max-width: 80px; object-fit: contain; flex-shrink: 1;">
+                                                    <div class="v-flex" style="align-items: flex-start; gap: 0px; flex-shrink: 1;">
+                                                        <div id="statuscafe-username" style="text-transform: uppercase;"></div>
+                                                        <p>21 years old</p>
+                                                        <p>Non-Binary</p>
+                                                        <p>Mood:<a href="https://www.imood.com/users/Ulon"><img class="imood-widget" src="https://moods.imood.com/display/uname-Ulon/trans-1/imood.gif" alt="www.imood.com" border="0"></a></p>
+                                                    </div>
+                                                </div>
+                                                <hr style="margin-top: 5px; margin-bottom: 5px;">
+                                                <div class="frame" style="box-shadow: none;">
+                                                    <div id="statuscafe-content"></div>
+                                                    <div id="statuscafe-time" style="color: gray;"></div>
+                                                </div>
+                                                
+                                            </div> 
+                                        </div>
                                     </div>
-                                    <div class="content-frame white-bg" style="padding: 1px; display: flex; flex-direction: column; gap: 1px;">
-                                        <button class="normal-button navigation-button">Home</button>
-                                        <button class="normal-button navigation-button">
-                                            <div class="navigation-button-img" style="scale: .8; rotate: -10deg; translate: -95px 20px;"></div>
-                                            
-                                            <span style="z-index: 1;">Blog</span>
-                                        </button>
-                                        <button class="normal-button navigation-button">
-                                            <div class="navigation-button-img" style="background-image: url(images/navigation-buttons/webmaster-nav-img.png); scale: -.4 .4; rotate: -10deg; translate: -40px 5px"></div>
-                                            
-                                            <span style="z-index: 1;">Webmaster</span>
-                                        </button>
-                                        <button class="normal-button navigation-button">
-                                            <div class="navigation-button-img" style="background-image: url(images/navigation-buttons/games-nav-img.png); width: 500px; scale: -.4 .4; rotate: -10deg; translate: -180px -5px; background-position: -130px;" ></div>
-                                            
-                                            <span style="z-index: 1;">Games</span>
-                                        </button>
-                                        <button class="normal-button navigation-button">
-                                            
-                                            <span style="z-index: 1;">Ulon.FM</span>
-                                        </button>
-                                        <button class="normal-button navigation-button">
-                                            
-                                            <span style="z-index: 1;">Gallery</span>
-                                        </button>
-                                        <button class="normal-button navigation-button">
-                                            
-                                            <span style="z-index: 1;">Guestbook</span>
-                                        </button>
-                                        <button class="normal-button navigation-button">
-                                            
-                                            <span style="z-index: 1;">Shrines</span>
-                                        </button>
-                                        <button class="normal-button navigation-button">
-                                            
-                                            <span style="z-index: 1;">Workspace</span>
-                                        </button>
-                                        <button class="normal-button navigation-button">
-                                            
-                                            <span style="z-index: 1;">Journal</span>
-                                        </button>
-                                        <button class="normal-button navigation-button">
-                                            
-                                            <span style="z-index: 1;">Resources</span>
-                                        </button>
-                                        <button class="normal-button navigation-button">
-                                            
-                                            <span style="z-index: 1;">Neighbours</span>
-                                        </button>
+
+                                    <!-- NAVIGATION WINDOW -->
+                                    <div class="frame">
+                                        <div class="w-bar" style="display: flex; max-height: 100px;">
+                                            <p>Navigate Around</p> 
+                                            <button class="frame w-close-button">X</button>
+                                        </div>
+                                        <div class="content-frame white-bg" style="padding: 1px; display: flex; flex-direction: column; gap: 1px;">
+                                            <button class="normal-button navigation-button">Home</button>
+                                            <button class="normal-button navigation-button">
+                                                <div class="navigation-button-img" style="scale: .8; rotate: -10deg; translate: -95px 20px;"></div>
+                                                
+                                                <span style="z-index: 1;">Blog</span>
+                                            </button>
+                                            <button class="normal-button navigation-button">
+                                                <div class="navigation-button-img" style="background-image: url(images/navigation-buttons/webmaster-nav-img.png); scale: -.4 .4; rotate: -10deg; translate: -40px 5px"></div>
+                                                
+                                                <span style="z-index: 1;">Webmaster</span>
+                                            </button>
+                                            <button class="normal-button navigation-button">
+                                                <div class="navigation-button-img" style="background-image: url(images/navigation-buttons/games-nav-img.png); width: 500px; scale: -.4 .4; rotate: -10deg; translate: -180px -5px; background-position: -130px;" ></div>
+                                                
+                                                <span style="z-index: 1;">Games</span>
+                                            </button>
+                                            <button class="normal-button navigation-button">
+                                                
+                                                <span style="z-index: 1;">Ulon.FM</span>
+                                            </button>
+                                            <button class="normal-button navigation-button">
+                                                
+                                                <span style="z-index: 1;">Gallery</span>
+                                            </button>
+                                            <button class="normal-button navigation-button">
+                                                
+                                                <span style="z-index: 1;">Guestbook</span>
+                                            </button>
+                                            <button class="normal-button navigation-button">
+                                                
+                                                <span style="z-index: 1;">Resources</span>
+                                            </button>
+                                            <button class="normal-button navigation-button">
+                                                
+                                                <span style="z-index: 1;">Neighbours</span>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
 
-                            </div>
-                            
-
-
-
-
-
-
-
-                            <!-- MAIN CONTENT -->
-                            <div class="flex-item" style="flex-grow: 3;">
-                                <!-- HOME PAGE CONTENT (TEMPORARY)-->
-                                <!-- HOME WINDOW -->
-                                <div class="frame">
-                                    <div class="w-bar"><p>Home - is online</p> <button class="frame w-close-button">X</button></div>
-                                    <div class="content-frame white-bg" style="padding: 25px; padding-top: 10px; padding-bottom: 15px; overflow: hidden;">
-                                        <div class="center-div" style="display: flex; flex-direction: column;">
-                                            <p>
-                                                <span class="h-light">Hey!! Welcome to my ACTUAL Website :3</span> I made this place to share some parts of me and have a safe space to do whatever I want without social media numbers and anxiety lol.
-                                            </p>
-                                            <p><h-strong> --------------- &lt3 ---------------</h-strong></p>
-                                            <p><h-light>I'm rebuilding this place from scratch, it used to be made in Godot <br>(I'm an HTML begginer) 
-                                                    (WIP).</h-light></p>
-                                            <div style="display: flex; flex-direction: row;">
-                                                <p>
-                                                    Feel free to take a look around, my socials are on the right 
-                                                                        in case you need anything. <h-strong>&lt3
-                                                    <br>English is not my first language <b>THERE WILL BE MISTAKES, I'M SORRY.</b></h-strong>
-                                                </p>
-                                                <img src="images/gifs/professor-hypnospace.gif" style="max-width: 100px; object-fit: none; 
-                                                align-self: flex-end; scale: 2; translate: -40px -13px;" alt="">
+                                    <!-- VISITOR COUNTER -->
+                                    <div class="frame">
+                                        <div class="w-bar" style="display: flex; max-height: 100px;">
+                                            <p> VISITOR COUNTER</p>
+                                        </div>
+                                        <div class="content-frame white-bg" style="text-align: center; background-color: rgb(22, 22, 22); gap: 10px; display: flex; flex-direction: column;">
+                                            <div class="fire">
+                                                <!-- ACTUALL VISITORS-->
+                                                <p id="visitors" class="visitor-counter-label outlined-text">Nekoweb: ...</p>
+                                                <p class="visitor-counter-label outlined-text" id="visitor-count">Neocities: ...</p>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                    
+                                    <!-- OLD WEBSITE BUTTON -->
+                                    <a class="no-underline" href="https://ulon.nekoweb.org" target="_blank">
+                                        <button class="normal-button window-shadow" style="width: 100%;">
+                                            <div class="center-div" style="gap: 5px;">
+                                                <p style="flex-grow: 1;">OLD WEBSITE</p>
+                                                
+                                                <img src="images/icons/favicons/favicon.png" alt="" style="width:  40px; image-rendering: pixelated;">
+                                            </div>
+                                        </button>
+                                    </a>
 
-                                <div class="horizontal-flex" style="justify-content: center;">
-                                    
-                                    <!-- CHANGELOG -->
-                                    <div class="frame flex-grow flex-base">  <!--id="changelog-container" -->
-                                        <div class="w-bar"><p>Changelog</p> <button class="frame w-close-button">X</button></div>
-                                        <div class="content-frame white-bg inside-windows-scroll" style=" min-height: 300px; max-height: 400px; overflow-y:auto;">
-                                            <div id="changelog-container" style="width: 100%"></div>
+                                    <!-- FOLLOWER COUNTER -->
+                                    <div class="frame">
+                                        <div class="w-bar low-sat-rainbow" style="display: flex; max-height: 100px;">
+                                            <p style="color: black;"> FOLLOWERS</p>
                                         </div>
-                                    </div>
-                                    
-                                    <!-- TO-DO LIST -->
-                                    <div class="frame flex-grow flex-base" style="height: auto;">
-                                        <div class="w-bar"><p>TO-DO list</p> <button class="frame w-close-button">X</button></div>
-                                        <div class="content-frame white-bg inside-windows-scroll" style=" min-height: 300px; max-height: 400px; overflow-y:auto;">
-                                            <div class="todo-container">
-                                                <ul id="todo-container">
-                                                    <li><button></button> This list is empty...This list is empty...This list is empty...</li>
-                                                </ul>
+                                        <div class="content-frame white-bg " style="text-align: center; background-color: rgb(22, 22, 22); gap: 10px; display: flex; flex-direction: column;">
+                                            <div style="display: flex;">
+                                                <!-- FOLLOWERS CONTENT-->
+                                                <div class="center-div" style="display: flex; flex-direction: column; flex-grow: 1;">
+                                                    <p id="followers" class="outlined-text" style="color: white; translate: 0px 0px; translate: -10px 0px; letter-spacing: 3px;">######</p>
+                                                    
+                                                </div>
+                                                <!-- WIZARD GIF LOL-->
+                                                <div style="min-height: 50px; position: relative; min-width: 100px;">
+                                                    <img src="https://ulon.dev/images/gifs/wizard_pc.gif" alt="wizard lol" style="position: absolute; left: -70px; top: -140px; scale: -.7 .7; pointer-events: none;">
+                                                </div>
                                             </div>
                                         </div>
+                                        <a href="https://nekoweb.org/follow/ulon.dev" class="no-underline" target="_blank">
+                                            <button class="normal-button no-underline" style="rotate: -2deg; width: 100%; left: -20px; bottom: 16px;">Follow on Nekoweb</button>
+                                        </a>
+                                        <a href="https://neocities.org/site/ulon" class="no-underline" target="_blank">
+                                            <button class="normal-button no-underline" style="rotate: -2deg; width: 100%; left: -20px; bottom: -30px; font-size: x-large;">Follow on Neocities</button>
+                                        </a>
                                     </div>
 
-                                    <!-- FUNNY GIF -->
-                                    <div class="frame flex-grow flex-base" style="min-width: 250px; max-width: 350px; rotate: 2deg; z-index: 1;">
-                                        <div class="w-bar"><p>Working...</p> <button class="frame w-close-button">X</button></div>
-                                        <div class="center-div content-frame white-bg" style="flex-grow: 1; width: 100%; height: 100%; overflow: hidden;">
-                                            <img src="https://ulon.dev/images/gifs/the-sims-computer.gif" alt="the sims computer" style="width: 100%; scale: 1.35;">
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            
-
-
-
-
-
-
-
-
-
-
-
-                            <!-- RIGHT SIDE BAR -->
-                            <div class="flex-item side-bar">
-
-                                <!-- STATUS WINDOW -->
-                                <div class="frame">
-                                    <div class="w-bar" style="display: flex;">
-                                        <div id="statuscafe-username" style="text-transform: uppercase;"></div>
-                                    </div>
-                                    <div class="content-frame white-bg" style="padding: 5px; padding-bottom: 0; text-align: center;">
-                                        <div id="statuscafe">
-                                            <div id="statuscafe-content"></div>
-                                            <div id="statuscafe-time" style="color: gray;"></div>
-                                            <a href="https://www.imood.com/users/Ulon"><img src="https://moods.imood.com/display/uname-Ulon/trans-1/imood.gif" alt="www.imood.com" border="0" style="image-rendering: pixelated; width: 100px; margin: 0;"></a>
-                                        </div> 
-                                    </div>
-                                </div>
-
-                                <!-- VISITOR COUNTER -->
-                                <div class="frame">
-                                    <div class="w-bar" style="display: flex; max-height: 100px;">
-                                        <p> VISITOR COUNTER</p>
-                                    </div>
-                                    <div class="content-frame white-bg" style="text-align: center; background-color: rgb(22, 22, 22); gap: 10px; display: flex; flex-direction: column;">
-                                        <div class="fire">
-                                            <!-- ACTUALL VISITORS-->
-                                            <p id="visitors" class="visitor-counter-label outlined-text">Nekoweb: ...</p>
-                                            <p class="visitor-counter-label outlined-text" id="visitor-count">Neocities: ...</p>
-                                        </div>
-                                    </div>
                                 </div>
                                 
-                                <!-- OLD WEBSITE BUTTON -->
-                                <a class="no-underline" href="https://ulon.nekoweb.org" target="_blank">
-                                    <button class="normal-button window-shadow" style="width: 100%;">
-                                        <div class="center-div" style="gap: 5px;">
-                                            <p style="flex-grow: 1;">OLD WEBSITE</p>
-                                            <img src="images/icons/favicons/favicon.png" alt="" style="width:  40px; image-rendering: pixelated;">
-                                        </div>
-                                    </button>
-                                </a>
 
-                                <!-- FOLLOWER COUNTER -->
-                                <div class="frame">
-                                    <div class="w-bar low-sat-rainbow" style="display: flex; max-height: 100px;">
-                                        <p style="color: black;"> FOLLOWERS</p>
-                                    </div>
-                                    <div class="content-frame white-bg " style="text-align: center; background-color: rgb(22, 22, 22); gap: 10px; display: flex; flex-direction: column;">
-                                        <div style="display: flex;">
-                                            <!-- FOLLOWERS CONTENT-->
-                                            <div class="center-div" style="display: flex; flex-direction: column; flex-grow: 1;">
-                                                <p id="followers" class="outlined-text" style="color: white; translate: 0px 0px; translate: -10px 0px; letter-spacing: 3px;">######</p>
+
+
+
+
+
+
+                                <!-- MAIN CONTENT -->
+                                <div class="flex-item" style="flex-grow: 4;">
+                                    <!-- HOME PAGE CONTENT (TEMPORARY)-->
+                                    <!-- HOME WINDOW -->
+                                    <div class="frame">
+                                        <div class="w-bar"><p>Home - is online</p> <button class="frame w-close-button">X</button></div>
+                                        <div class="content-frame white-bg" style="padding: 25px; padding-top: 10px; padding-bottom: 15px; overflow: hidden;">
+                                            <div class="center-div" style="display: flex; flex-direction: column;">
+                                                <p>
+                                                    <span class="h-light">Hey!! Welcome to my ACTUAL Website :3</span> I made this place to share some parts of me and have a safe space to do whatever I want without social media numbers and anxiety lol.
+                                                </p>
+                                                <p><h-strong> --------------- &lt3 ---------------</h-strong></p>
+                                                <p><h-light>I'm rebuilding this place from scratch, it used to be made in Godot <br>(I'm an HTML begginer) 
+                                                        (WIP).</h-light></p>
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <p>
+                                                        
+                                                        <br><h-strong>English is not my first language <b>THERE WILL BE MISTAKES, I'M SORRY.</b></h-strong><br>
+                                                        This place was not made with mobile devices in mind.<br>
+                                                        Made in a 1920x1080 monitor.
+                                                    </p>
+                                                    <div style="flex-grow: 1; min-width: 100px;" style="position: relative;">
+                                                        <img src="images/gifs/professor-hypnospace.gif" style=" position: absolute; max-width: 100px; object-fit: none; 
+                                                        align-self: flex-end; scale: 2; translate: 0 0; right: 40px; bottom: 20px;" alt="">
+                                                    </div>
+                                                </div>
+                                                    
                                                 
                                             </div>
-                                            <!-- WIZARD GIF LOL-->
-                                            <div style="min-height: 50px; position: relative; min-width: 100px;">
-                                                <img src="https://ulon.dev/images/gifs/wizard_pc.gif" alt="wizard lol" style="position: absolute; left: -70px; top: -140px; scale: -.7 .7; pointer-events: none;">
+                                        </div>
+                                    </div>
+
+                                    <div class="horizontal-flex" style="justify-content: center;">
+                                        
+                                        <!-- CHANGELOG -->
+                                        <div class="frame flex-grow flex-base">  <!--id="changelog-container" -->
+                                            <div class="w-bar"><p>Changelog</p> <button class="frame w-close-button">X</button></div>
+                                            <div class="content-frame white-bg inside-windows-scroll" style=" min-height: 300px; max-height: 400px; overflow-y:auto;">
+                                                <div id="changelog-container" style="width: 100%"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- TO-DO LIST -->
+                                        <div class="frame flex-grow flex-base" style="height: auto;">
+                                            <div class="w-bar"><p>TO-DO list</p> <button class="frame w-close-button">X</button></div>
+                                            <div class="content-frame white-bg inside-windows-scroll" style=" min-height: 300px; max-height: 400px; overflow-y:auto;">
+                                                <div class="todo-container">
+                                                    <ul id="todo-container">
+                                                        <li><button></button> This list is empty...This list is empty...This list is empty...</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FUNNY GIF -->
+                                        <div class="frame flex-grow flex-base" style="min-width: 250px; max-width: 350px; rotate: 2deg; z-index: 1;">
+                                            <div class="w-bar"><p>Working...</p> <button class="frame w-close-button">X</button></div>
+                                            <div class="center-div content-frame white-bg" style="flex-grow: 1; width: 100%; height: 100%; overflow: hidden;">
+                                                <img src="https://ulon.dev/images/gifs/the-sims-computer.gif" alt="the sims computer" style="width: 100%; scale: 1.35;">
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="https://nekoweb.org/follow/ulon.dev" class="no-underline">
-                                        <button class="normal-button no-underline" style="rotate: -2deg; width: 100%; left: -20px; bottom: 16px;">Follow on Nekoweb</button>
-                                    </a>
-                                    <a href="https://nekoweb.org/follow/ulon.dev" class="no-underline">
-                                        <button class="normal-button no-underline" style="rotate: -2deg; width: 100%; left: -20px; bottom: -30px; font-size: x-large;">Follow on Neocities</button>
-                                    </a>
+
                                 </div>
                                 
+
+
+
+
+
+
+
+
+
+
+
+                                <!-- RIGHT SIDE BAR
+                                <div class="flex-item side-bar">
+
+                                    
+                                    
+                                </div> -->
+
+                                
                             </div>
-                        </div>
 
+                            <div class="marquee" style="gap: 0; --duration: 25s; --direction: reverse;">
+                                <div class="marquee__content" style="gap: 0; overflow: visible;">
+                                    <img class="stamp-button" src="images/stamps/88x31nocookie.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/148.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/2020SUCKS.png" alt="">
+                                    <img class="stamp-button" src="images/stamps/best_viewed_in_landscape.png" alt="">
+                                    <img class="stamp-button" src="images/stamps/bestview.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/bestvieweddesktop.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/eyes2.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/fireskull.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/foreveronline2.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/halflife.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/iwishicouldgobackintime.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/loopdeloop_20.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/music.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/nintendo-hh-3ds.png" alt="">
+                                    <img class="stamp-button" src="images/stamps/playstation.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/stop_microsoft.gif" alt="">
+                                    <a href="https://ulon.nekoweb.org" target="_blank"><img class="stamp-button" src="images/stamps/ulon_button.gif" alt=""></a>
+                                    <img class="stamp-button" src="images/stamps/web.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/wingun.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/xp.gif" alt="">
+                                    <a href="https://status.cafe" target="_blank"><img class="stamp-button" src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
+                                </div>
+                                <div class="marquee__content" aria-hidden="true" style="gap: 0; --duration: 25s; --direction: reverse;">
+                                    <img class="stamp-button" src="images/stamps/88x31nocookie.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/148.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/2020SUCKS.png" alt="">
+                                    <img class="stamp-button" src="images/stamps/best_viewed_in_landscape.png" alt="">
+                                    <img class="stamp-button" src="images/stamps/bestview.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/bestvieweddesktop.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/eyes2.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/fireskull.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/foreveronline2.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/halflife.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/iwishicouldgobackintime.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/loopdeloop_20.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/music.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/nintendo-hh-3ds.png" alt="">
+                                    <img class="stamp-button" src="images/stamps/playstation.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/stop_microsoft.gif" alt="">
+                                    <a href="https://ulon.nekoweb.org" target="_blank"><img class="stamp-button" src="images/stamps/ulon_button.gif" alt=""></a>
+                                    <img class="stamp-button" src="images/stamps/web.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/wingun.gif" alt="">
+                                    <img class="stamp-button" src="images/stamps/xp.gif" alt="">
+                                    <a href="https://status.cafe" target="_blank"><img class="stamp-button" src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
+                                </div>
+                            </div>
+
+
+                        </div>
                     </div>
 
-                    <br></br>
+                    <br>
 
-                    <div class="marquee" style="gap: 0; --duration: 25s; --direction: reverse;" >
-                        <div class="marquee__content" style="gap: 0; overflow: visible;">
-                            <img class="stamp-button" src="images/stamps/88x31nocookie.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/148.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/2020SUCKS.png" alt="">
-                            <img class="stamp-button" src="images/stamps/best_viewed_in_landscape.png" alt="">
-                            <img class="stamp-button" src="images/stamps/bestview.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/bestvieweddesktop.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/eyes2.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/fireskull.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/foreveronline2.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/halflife.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/iwishicouldgobackintime.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/loopdeloop_20.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/music.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/nintendo-hh-3ds.png" alt="">
-                            <img class="stamp-button" src="images/stamps/playstation.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/stop microsoft.gif" alt="">
-                            <a href="https://ulon.nekoweb.org" target="_blank"><img class="stamp-button" src="images/stamps/ulon_button.gif" alt=""></a>
-                            <img class="stamp-button" src="images/stamps/web.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/wingun.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/xp.gif" alt="">
-                            <a href="https://status.cafe" target="_blank"><img class="stamp-button" src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
-                        </div>
-                        <div class="marquee__content" aria-hidden="true" style="gap: 0; --duration: 25s; --direction: reverse;">
-                            <img class="stamp-button" src="images/stamps/88x31nocookie.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/148.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/2020SUCKS.png" alt="">
-                            <img class="stamp-button" src="images/stamps/best_viewed_in_landscape.png" alt="">
-                            <img class="stamp-button" src="images/stamps/bestview.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/bestvieweddesktop.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/eyes2.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/fireskull.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/foreveronline2.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/halflife.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/iwishicouldgobackintime.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/loopdeloop_20.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/music.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/nintendo-hh-3ds.png" alt="">
-                            <img class="stamp-button" src="images/stamps/playstation.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/stop microsoft.gif" alt="">
-                            <a href="https://ulon.nekoweb.org" target="_blank"><img class="stamp-button" src="images/stamps/ulon_button.gif" alt=""></a>
-                            <img class="stamp-button" src="images/stamps/web.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/wingun.gif" alt="">
-                            <img class="stamp-button" src="images/stamps/xp.gif" alt="">
-                            <a href="https://status.cafe" target="_blank"><img class="stamp-button" src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
-                        </div>
-                    </div>
+                    
 
+                    
                 </div>
             </div>
     </body>

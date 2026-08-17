@@ -9,6 +9,7 @@
   user-select: none;
   gap: var(--gap);
   width: 100%;
+  
 }
 
 /* Individual track columns */
@@ -21,7 +22,6 @@
   
   /* 2. Força o conteúdo a esticar e ocupar toda a largura da tela */
   flex-grow: 1; 
-  min-width: 100%;
   
   gap: var(--gap);
   animation: scroll var(--duration) linear infinite;
@@ -166,15 +166,31 @@
 #statuscafe-username {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 100%;
 }
 #statuscafe-username a {
-  color: white;
+  color: rgb(8, 11, 53);
+  text-decoration: none;
 }
+#statuscafe-username a:hover {
+  font-weight: bold;
+}
+
 
 
 /* -------------------------- NEKOWEB API -------------------------- */
 #visitor-counter-label {
   color: white;
+}
+
+
+/* -------------------------- NEKOWEB API -------------------------- */
+.imood-widget {
+  image-rendering: pixelated;
+  width: 80px;
+  margin: 0;
+  transition: .1s;
+}
+.imood-widget:hover {
+  scale: 1.1;
 }

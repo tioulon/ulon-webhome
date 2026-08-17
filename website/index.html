@@ -18,7 +18,6 @@
         <script src="js/neocities/visitors.js" defer></script>
 
         
-        <script src="js-content/changelog-data.js" defer></script>
         <script type="module" src="js/script.js" defer></script>
     </head>
     
@@ -28,7 +27,6 @@
             <div class="content-frame white-bg">Content</div>
         </div>
     -->
-
 
     <body>
         <div class="parallax-container">
@@ -166,7 +164,7 @@
                                     <!-- CHANGELOG -->
                                     <div class="frame flex-grow flex-base">  <!--id="changelog-container" -->
                                         <div class="w-bar"><p>Changelog</p> <button class="frame w-close-button">X</button></div>
-                                        <div class="content-frame white-bg inside-windows-scroll" style=" min-height: 300px; max-height: 400px; overflow-y: scroll;">
+                                        <div class="content-frame white-bg inside-windows-scroll" style=" min-height: 300px; max-height: 400px; overflow-y:auto;">
                                             <div id="changelog-container" style="width: 100%"></div>
                                         </div>
                                     </div>
@@ -174,8 +172,12 @@
                                     <!-- TO-DO LIST -->
                                     <div class="frame flex-grow flex-base" style="height: auto;">
                                         <div class="w-bar"><p>TO-DO list</p> <button class="frame w-close-button">X</button></div>
-                                        <div class="content-frame white-bg inside-windows-scroll" style="overflow-y: scroll;">
-                                            This list is empty...
+                                        <div class="content-frame white-bg inside-windows-scroll" style=" min-height: 300px; max-height: 400px; overflow-y:auto;">
+                                            <div class="todo-container">
+                                                <ul id="todo-container">
+                                                    <li><button></button> This list is empty...This list is empty...This list is empty...</li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -226,8 +228,8 @@
                                     <div class="content-frame white-bg" style="text-align: center; background-color: rgb(22, 22, 22); gap: 10px; display: flex; flex-direction: column;">
                                         <div class="fire">
                                             <!-- ACTUALL VISITORS-->
-                                            <p id="visitors" class="visitor-counter-label outlined-text"></p>
-                                            <p class="visitor-counter-label outlined-text" id="visitor-count"></p>
+                                            <p id="visitors" class="visitor-counter-label outlined-text">Nekoweb: ...</p>
+                                            <p class="visitor-counter-label outlined-text" id="visitor-count">Neocities: ...</p>
                                         </div>
                                     </div>
                                 </div>

@@ -349,6 +349,22 @@ body {
     color: var(--high-light);
 }
 
+/*---------------------------- TO-DO CONTENT ----------------------------*/
+.todo-container li {
+    padding-left: 15px;
+    line-height: 25px;
+    margin-top: .8rem;
+    margin-bottom: .9rem;
+}
+.todo-container button {
+    color: rgba(255, 255, 255, 0);
+    min-width: 20px;
+    min-height: 20px;
+    
+    background-color: transparent;
+    border: solid var(--high-light) 2.5px;
+    pointer-events: none;
+}
 /*---------------------------- STAMPS ELEMENTS ----------------------------*/
 .stamp-container {
     display: flex;

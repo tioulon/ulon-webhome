@@ -50,4 +50,37 @@ document.addEventListener('DOMContentLoaded', () => {
         
     }
     getChangelogs();
+
+    async function getTodolist() {
+
+        const records = await pb.collection('uh_todo_list').getFullList({
+            sort: 'created',
+        });
+
+        console.log(records.length);
+
+        const container = document.getElementById('todo-container');
+        
+        // Limpa o texto inicial
+        container.textContent = '';
+        
+        let htmlGerado = '';
+        
+
+        for (let index = 0; index < records.length; index++) {
+            const element = records[index];
+            console.log(element);
+
+            htmlGerado += `<li><button></button> ${element.content}</li>`;
+
+        }
+
+        if (records.length == 0) {
+            htmlGerado = "No Tasks Found."
+        }
+        // Insere tudo otimizado na tela
+        container.insertAdjacentHTML('beforeend', htmlGerado);
+        
+    }
+    getTodolist();
 });

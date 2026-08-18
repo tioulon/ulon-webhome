@@ -11,7 +11,7 @@
 /*!@nkb "domain":"ulon.nekoweb.org","rss":"","overflow":false,"readonly":false */
 .site-box {
     text-align: left;
-    background-image: url(/images/elements/main_sitebox.png);
+    background-image: url(//ulon.nekoweb.org/ulon.dev/images/elements/main_sitebox.png);
     background-size: 275px 189px;
     color: white;
     font-size: 12px;
@@ -28,7 +28,7 @@
     transition-timing-function: ease !important;
 }
 .site-box::before {
-    content: url(/images/elements/small_window.png);
+    content: url(//ulon.nekoweb.org/ulon.dev/images/elements/small_window.png);
     position: absolute;
     bottom: -41px;
     left: -49px;
@@ -45,7 +45,7 @@
 }
 .site-box::after {
     content: " ";
-    background-image: url(/cd-rotate.gif);
+    background-image: url(//ulon.nekoweb.org/ulon.dev/cd-rotate.gif);
     image-rendering: pixelated;
     background-repeat: no-repeat;
     position: absolute;

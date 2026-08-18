@@ -4,7 +4,7 @@ import PocketBase from 'https://cdn.jsdelivr.net/npm/pocketbase@0.25.0/dist/pock
 
 const pb = new PocketBase('https://api.ulon.site')
 
-document.addEventListener('DOMContentLoaded', () => {
+function init() {
 
     async function getChangelogs() {
 
@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(records.length);
 
         const container = document.getElementById('changelog-container');
+        if (!container) return;
         
         // Limpa o texto inicial
         container.textContent = '';
@@ -60,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(records.length);
 
         const container = document.getElementById('todo-container');
+        if (!container) return;
         
         // Limpa o texto inicial
         container.textContent = '';
@@ -88,4 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
         
     }
     getTodolist();
-});
+};
+
+// roda no load inicial
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  init();
+} else {
+  document.addEventListener('DOMContentLoaded', init);
+}
+
+// roda de novo depois de cada navegação via swup
+swup.hooks.on('page:view', () => init());
